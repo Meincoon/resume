@@ -248,6 +248,14 @@ body .container .card .form_one .mail input::placeholder, body .container .card 
   text-align: center;
   font-size: 20px;
 }
+body .container .card .form_one .mail input:focus:invalid, body .container .card .form_one .name input:focus:invalid {
+  border-bottom: 1px solid rgb(255, 0, 0);
+  border-top: 1px solid rgb(255, 0, 0);
+}
+body .container .card .form_one .mail input:valid, body .container .card .form_one .name input:valid {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
 body .container .card .form_one .btn__container {
   text-align: center;
 }
