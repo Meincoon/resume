@@ -1,41 +1,44 @@
 const form = document.querySelector('.form_one');
 const nameInput = document.getElementById('name');
+var style_name = window.getComputedStyle(nameInput,null).getPropertyValue("borderColor");
 const emailInput = document.getElementById('mail');
+var style_email = window.getComputedStyle(emailInput,null).getPropertyValue("borderColor");
 const messageInput = document.getElementById('text');
+var style_message = window.getComputedStyle(messageInput,null).getPropertyValue("borderColor");
 const nameError = document.getElementById('nameError');
 const emailError = document.getElementById('emailError');
 const messageError = document.getElementById('messageError');
+function borderColor(){
+  nameInput.style.borderColor = style_name;
+  emailInput.style.borderColor = style_email;
+  messageInput.style.borderColor = style_message;
+}
 form.addEventListener('submit', function(event) {
-  nameInput.style.borderTop = '1px solid black';
-  nameInput.style.borderBottom = '1px solid black';
-  emailInput.style.borderTop = '1px solid black';
-  emailInput.style.borderBottom = '1px solid black';
-  messageInput.style.borderTop = '1px solid black';
-  messageInput.style.borderBottom = '1px solid black';
+  borderColor();
   event.preventDefault();
   if (nameInput.value.trim() === '') {
     nameInput.style.borderTop = '1px solid red';
     nameInput.style.borderBottom = '1px solid red';
     nameInput.focus();
-    return;
+    return false;
   }
   const email = emailInput.value.trim();
   if (email === '') {
     emailInput.style.borderTop = '1px solid red';
     emailInput.style.borderBottom = '1px solid red';
     emailInput.focus();
-    return;
+    return false;
   } else if (!isValidEmail(email)) {
     emailInput.style.borderTop = '1px solid red';
     emailInput.style.borderBottom = '1px solid red';
     emailInput.focus();
-    return;
+    return false;
   }
   if (messageInput.value.trim() === '') {
     messageInput.style.borderTop = '1px solid red';
     messageInput.style.borderBottom = '1px solid red';
     messageInput.focus();
-    return;
+    return false;
   }
   sendMessage();
 });
@@ -65,12 +68,7 @@ function sendMessage() {
           document.getElementById("name").value = "";
           document.getElementById("mail").value = "";
           document.getElementById("text").value = "";
-          nameInput.style.borderTop = '1px solid black';
-          nameInput.style.borderBottom = '1px solid black';
-          emailInput.style.borderTop = '1px solid black';
-          emailInput.style.borderBottom = '1px solid black';
-          messageInput.style.borderTop = '1px solid black';
-          messageInput.style.borderBottom = '1px solid black';
+          borderColor();
         } else {
           console.error("Error sending message:", xhr.status);
         }
