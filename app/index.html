@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="cv, resume">
+  <meta name="keywords" content="сайт - резюме">
+
+  <title>Resume</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/jquery-3.7.0.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="index.html" class="title menu__link">резюме</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="avatar">
+        <img src="images/avatar.jpg" alt="avatar" class="avatar__img">
+        <h2 class="title avatar__name">максим</h2>
+      </section>
+      <section class="about">
+        <h3 class="title title__about">О себе:</h3>
+        <p class="text text__about">Привет! Я увлеченный и амбициозный начинающий веб-программист с опытом профессионального образования в качестве системного администратора.
+        
+        Я всегда готов обсудить потенциальные проекты, сотрудничество или любые возможности для роста. Не стесняйтесь обращаться
+        ко мне через <a href="#" class="text about__link">телеграм</a> или оставить сообщение в форме ниже, и я быстро свяжусь с вами.
+        
+        Спасибо за внимание к моему профилю. Я с нетерпением жду возможности поделиться своими навыками в качестве начинающего веб-программиста. Давайте строить будущее вместе!</p>
+      </section>
+    </div>
+    <section class="experience text">
+      <h3 class="title experience__title">умения</h3>
+      <ul class="experience__list">
+        <li class="experience__item">
+          <p class="text experience__text">кроссбраузерность</p>
+          <p class="text experience__text">адаптивность</p>
+              <p class="text experience__text">html5</p>
+              <p class="text experience__text">бэм</p>
+              <p class="text experience__text">git</p>
+            </li>
+            <li class="experience__item">
+              <p class="text experience__text">анимации</p>
+              <p class="text experience__text">flexbox</p>
+              <p class="text experience__text">grid</p>
+              <p class="text experience__text">scss</p>
+              <p class="text experience__text">css3</p>
+        </li>
+        <li class="experience__item">
+          <p class="text experience__text">анимации</p>
+              <p class="text experience__text">java script</p>
+              <p class="text experience__text">node.js</p>
+              <p class="text experience__text">jquery</p>
+              <p class="text experience__text">gulp</p>
+        </li>
+        <li class="experience__item">
+              <p class="text experience__text">visual studio code</p>
+              <p class="text experience__text">photoshop</p>
+              <p class="text experience__text">avocode</p>
+              <p class="text experience__text">figma</p>
+        </li>
+      </ul>
+    </section>
+    <form action="#" class="form">
+      <h3 class="title title__form">отправить мне сообщение</h3>
+      <div class="container">
+        <input type="text" id="name" class="text text__form form__input" placeholder="ваше имя..." minlength="2">
+        <input type="email" id="email" class="text text__form form__input" placeholder="ваш email..." minlength="3">
+      </div>
+      <textarea contenteditable="true" name="" id="message" class="text text__form form__textarea" placeholder="ваше сообщение..." minlength="10"></textarea>
+      <button class="text form__button">отправить</button>
+    </form>
+  </div>
+</body>
+
+</html>
