@@ -157,6 +157,9 @@ body {
 .title {
   font-size: calc(18px + 6 * ((100vw - 320px) / 880));
 }
+.title__about {
+  margin-bottom: 20px;
+}
 .title__form {
   width: 100%;
   margin-bottom: 20px;

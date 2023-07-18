@@ -60,6 +60,7 @@ body{
     @extend %title;
     @include adaptiv-font(24, 18);
     &__about {
+      margin-bottom: 20px;
     }
     &__form {
       width: 100%;
