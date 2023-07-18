@@ -164,8 +164,9 @@ body {
 }
 
 .text {
-  font-size: calc(10px + 6 * ((100vw - 320px) / 880));
+  font-size: calc(14px + 4 * ((100vw - 320px) / 880));
 }
+
 .header {
   width: 100%;
 }

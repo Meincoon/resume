@@ -69,9 +69,7 @@ body{
 }
 .text {
   @extend %text;
-  @include adaptiv-font(16, 10);
-    &__about {
-    }
+  @include adaptiv-font(18, 14);
 }
 .header {
   width: 100%;
